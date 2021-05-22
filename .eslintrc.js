@@ -23,4 +23,11 @@ module.exports = {
     'flowtype',
     'jest',
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
 };
