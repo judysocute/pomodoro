@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: local('CenturyGothic'), url(./assets/fonts/CenturyGothic.ttf) format('ttf');
+}
+
 @tailwind utilities;
