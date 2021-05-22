@@ -28,6 +28,12 @@ module.exports = {
           '"Noto Color Emoji"',
         ],
       },
+      backgroundColor: {
+        main: '#BC2B35',
+      },
+      textColor: {
+        primary: '#F2F0C9',
+      },
     },
   },
   variants: {
