@@ -1,24 +1,27 @@
+// @flow
 import React from 'react';
 import Navbar from 'Components/Navbar';
-import './App.css';
+import MainClock from 'Components/MainClock';
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+import './App.css';
 
 function App() {
   return (
     <div className="bg-main h-screen app">
       <Navbar />
-      {/* <Router>
+      <Router>
         <Switch>
           <Route path="/">
-            123
+            <MainClock />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </div>
   );
 }
