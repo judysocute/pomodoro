@@ -3,6 +3,8 @@
 [include]
 
 [libs]
+flow
+flow-typed
 
 [lints]
 
@@ -17,3 +19,6 @@ unclear-type
 unsafe-getters-setters
 untyped-import
 untyped-type-import
+
+[version]
+^0.151.0
