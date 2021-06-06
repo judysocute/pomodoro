@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import Navbar from 'Components/Navbar';
-import MainClock from 'Components/MainClock';
+import MainClock from 'features/tasks/MainClock';
 
 import {
   BrowserRouter as Router,

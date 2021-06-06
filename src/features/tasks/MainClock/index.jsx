@@ -5,15 +5,14 @@ import { toTimeString } from 'utils/time';
 import Notify from 'assets/img/notify.svg';
 import Start from 'assets/img/start.svg';
 import Next from 'assets/img/next.svg';
+import { useSelector, useDispatch } from 'react-redux';
+import { nextTask } from 'features/tasks/missionSlice';
 import ProgressBar from './ProgressBar';
 
 function MainClock() {
-  const [task] = useState<Task>({
-    id: 'sdad',
-    desc: 'ajdsijdisjad',
-    name: 'Clean up the desk',
-    totalSecond: 5,
-  });
+  const dispatch = useDispatch();
+  const { tasks, currentIndex }: Mission = useSelector((state) => state.mission);
+  const task = tasks[currentIndex];
 
   const [passedTime, setPassedTime] = useState(0);
   const [timerId, setTimerId] = useState(0);
@@ -61,7 +60,7 @@ function MainClock() {
         <button type="button" className="mx-2.5 cursor-pointer focus:outline-none z-10" onClick={startTimer}>
           <img src={Start} alt="Start" width="50" className="hover:opacity-50" />
         </button>
-        <button type="button" className="mx-2.5 cursor-pointer focus:outline-none z-10">
+        <button type="button" className="mx-2.5 cursor-pointer focus:outline-none z-10" onClick={() => dispatch(nextTask())}>
           <img src={Next} alt="Next" width="50" className="hover:opacity-50" />
         </button>
       </div>
